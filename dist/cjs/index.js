@@ -9252,17 +9252,6 @@ var Config = [
 					"tokens"
 				]
 			},
-			"0x92d6c1e31e14520e676a687f0a93788b716beff5": {
-				symbol: "DYDX",
-				name: "dYdX",
-				decimals: 18,
-				address: "0x92d6c1e31e14520e676a687f0a93788b716beff5",
-				logoURI: "https://assets.coingecko.com/coins/images/17500/large/hjnIm9bV.jpg?1628009360",
-				eip2612: true,
-				tags: [
-					"tokens"
-				]
-			},
 			"0xa4ef4b0b23c1fc81d3f9ecf93510e64f58a4a016": {
 				symbol: "1MIL",
 				name: "1MILNFT",
@@ -9476,26 +9465,6 @@ var Config = [
 				address: "0x949d48eca67b17269629c7194f4b727d4ef9e5d6",
 				logoURI: "https://tokens.1inch.io/0x949d48eca67b17269629c7194f4b727d4ef9e5d6.png",
 				eip2612: true,
-				tags: [
-					"tokens"
-				]
-			},
-			"0xfe18be6b3bd88a2d2a7f928d00292e7a9963cfc6": {
-				symbol: "sBTC",
-				name: "Synth sBTC",
-				decimals: 18,
-				address: "0xfe18be6b3bd88a2d2a7f928d00292e7a9963cfc6",
-				logoURI: "https://tokens.1inch.io/0xfe18be6b3bd88a2d2a7f928d00292e7a9963cfc6.png",
-				tags: [
-					"tokens"
-				]
-			},
-			"0x5e74c9036fb86bd7ecdcb084a0673efc32ea31cb": {
-				symbol: "sETH",
-				name: "Synth sETH",
-				decimals: 18,
-				address: "0x5e74c9036fb86bd7ecdcb084a0673efc32ea31cb",
-				logoURI: "https://tokens.1inch.io/0x5e74c9036fb86bd7ecdcb084a0673efc32ea31cb.png",
 				tags: [
 					"tokens"
 				]
@@ -10706,6 +10675,16 @@ var Config = [
 				decimals: 18,
 				address: "0x6c3f90f043a72fa612cbac8115ee7e52bde6e490",
 				logoURI: "https://tokens.1inch.io/0x6c3f90f043a72fa612cbac8115ee7e52bde6e490.png",
+				tags: [
+					"tokens"
+				]
+			},
+			"0x7659ce147d0e714454073a5dd7003544234b6aa0": {
+				symbol: "XCAD",
+				name: "XCAD Token",
+				decimals: 18,
+				address: "0x7659ce147d0e714454073a5dd7003544234b6aa0",
+				logoURI: "https://tokens.1inch.io/0x7659ce147d0e714454073a5dd7003544234b6aa0.png",
 				tags: [
 					"tokens"
 				]
@@ -14863,6 +14842,27 @@ var Config = [
 				tags: [
 					"tokens"
 				]
+			},
+			"0x431e0cd023a32532bf3969cddfc002c00e98429d": {
+				symbol: "XCAD",
+				name: "Chainport.io-Peg XCAD Token",
+				decimals: 18,
+				address: "0x431e0cd023a32532bf3969cddfc002c00e98429d",
+				logoURI: "https://tokens.1inch.io/0x431e0cd023a32532bf3969cddfc002c00e98429d.png",
+				tags: [
+					"tokens"
+				]
+			},
+			"0x766afcf83fd5eaf884b3d529b432ca27a6d84617": {
+				symbol: "BLID",
+				name: "Bolide",
+				decimals: 18,
+				address: "0x766afcf83fd5eaf884b3d529b432ca27a6d84617",
+				logoURI: "https://tokens.1inch.io/0x766afcf83fd5eaf884b3d529b432ca27a6d84617.png",
+				eip2612: true,
+				tags: [
+					"tokens"
+				]
 			}
 		}
 	},
@@ -17191,6 +17191,56 @@ var Config = [
 				decimals: 18,
 				address: "0x82362ec182db3cf7829014bc61e9be8a2e82868a",
 				logoURI: "https://tokens.1inch.io/0x82362ec182db3cf7829014bc61e9be8a2e82868a.png",
+				tags: [
+					"tokens"
+				]
+			},
+			"0x228b5c21ac00155cf62c57bcc704c0da8187950b": {
+				symbol: "NXD",
+				name: "Nexus Dubai",
+				decimals: 18,
+				address: "0x228b5c21ac00155cf62c57bcc704c0da8187950b",
+				logoURI: "https://tokens.1inch.io/0x228b5c21ac00155cf62c57bcc704c0da8187950b.png",
+				tags: [
+					"tokens"
+				]
+			},
+			"0xa55870278d6389ec5b524553d03c04f5677c061e": {
+				symbol: "XCAD",
+				name: "XCAD Token (PoS)",
+				decimals: 18,
+				address: "0xa55870278d6389ec5b524553d03c04f5677c061e",
+				logoURI: "https://tokens.1inch.io/0xa55870278d6389ec5b524553d03c04f5677c061e.png",
+				tags: [
+					"tokens"
+				]
+			},
+			"0x04b33078ea1aef29bf3fb29c6ab7b200c58ea126": {
+				symbol: "SAFLE",
+				name: "Safle",
+				decimals: 18,
+				address: "0x04b33078ea1aef29bf3fb29c6ab7b200c58ea126",
+				logoURI: "https://tokens.1inch.io/0x04b33078ea1aef29bf3fb29c6ab7b200c58ea126.png",
+				tags: [
+					"tokens"
+				]
+			},
+			"0xf4c83080e80ae530d6f8180572cbbf1ac9d5d435": {
+				symbol: "BLANK",
+				name: "GoBlank Token (PoS)",
+				decimals: 18,
+				address: "0xf4c83080e80ae530d6f8180572cbbf1ac9d5d435",
+				logoURI: "https://tokens.1inch.io/0xf4c83080e80ae530d6f8180572cbbf1ac9d5d435.png",
+				tags: [
+					"tokens"
+				]
+			},
+			"0x2e1ad108ff1d8c782fcbbb89aad783ac49586756": {
+				symbol: "TUSD",
+				name: "TrueUSD (PoS)",
+				decimals: 18,
+				address: "0x2e1ad108ff1d8c782fcbbb89aad783ac49586756",
+				logoURI: "https://tokens.1inch.io/0x2e1ad108ff1d8c782fcbbb89aad783ac49586756.png",
 				tags: [
 					"tokens"
 				]
@@ -19872,16 +19922,6 @@ var Config = [
 					"tokens"
 				]
 			},
-			"0x4988a896b1227218e4a686fde5eabdcabd91571f": {
-				symbol: "USDT",
-				name: "Tether USD",
-				decimals: 6,
-				address: "0x4988a896b1227218e4a686fde5eabdcabd91571f",
-				logoURI: "https://tokens.1inch.io/0x4988a896b1227218e4a686fde5eabdcabd91571f.png",
-				tags: [
-					"tokens"
-				]
-			},
 			"0xb12bfca5a55806aaf64e99521918a4bf0fc40802": {
 				symbol: "USDC",
 				name: "USD Coin",
@@ -19932,16 +19972,6 @@ var Config = [
 					"tokens"
 				]
 			},
-			"0x5ce9f0b6afb36135b5ddbf11705ceb65e634a9dc": {
-				symbol: "atUST",
-				name: "UST Terra",
-				decimals: 18,
-				address: "0x5ce9f0b6afb36135b5ddbf11705ceb65e634a9dc",
-				logoURI: "https://tokens.1inch.io/0x5ce9f0b6afb36135b5ddbf11705ceb65e634a9dc.png",
-				tags: [
-					"tokens"
-				]
-			},
 			"0xdcd6d4e2b3e1d1e1e6fa8c21c8a323dcbecff970": {
 				symbol: "ROSE",
 				name: "Rose Token",
@@ -19949,56 +19979,6 @@ var Config = [
 				address: "0xdcd6d4e2b3e1d1e1e6fa8c21c8a323dcbecff970",
 				logoURI: "https://tokens.1inch.io/0xdcd6d4e2b3e1d1e1e6fa8c21c8a323dcbecff970.png",
 				eip2612: true,
-				tags: [
-					"tokens"
-				]
-			},
-			"0xa33c3b53694419824722c10d99ad7cb16ea62754": {
-				symbol: "MECHA",
-				name: "Mecha",
-				decimals: 18,
-				address: "0xa33c3b53694419824722c10d99ad7cb16ea62754",
-				logoURI: "https://tokens.1inch.io/0xa33c3b53694419824722c10d99ad7cb16ea62754.png",
-				tags: [
-					"tokens"
-				]
-			},
-			"0xc21ff01229e982d7c8b8691163b0a3cb8f357453": {
-				symbol: "META",
-				name: "Meta Token",
-				decimals: 24,
-				address: "0xc21ff01229e982d7c8b8691163b0a3cb8f357453",
-				logoURI: "https://tokens.1inch.io/0xc21ff01229e982d7c8b8691163b0a3cb8f357453.png",
-				tags: [
-					"tokens"
-				]
-			},
-			"0xf0f3b9eee32b1f490a4b8720cf6f005d4ae9ea86": {
-				symbol: "POLAR",
-				name: "POLAR",
-				decimals: 18,
-				address: "0xf0f3b9eee32b1f490a4b8720cf6f005d4ae9ea86",
-				logoURI: "https://tokens.1inch.io/0xf0f3b9eee32b1f490a4b8720cf6f005d4ae9ea86.png",
-				tags: [
-					"tokens"
-				]
-			},
-			"0x9d6fc90b25976e40adad5a3edd08af9ed7a21729": {
-				symbol: "SPOLAR",
-				name: "SPOLAR",
-				decimals: 18,
-				address: "0x9d6fc90b25976e40adad5a3edd08af9ed7a21729",
-				logoURI: "https://tokens.1inch.io/0x9d6fc90b25976e40adad5a3edd08af9ed7a21729.png",
-				tags: [
-					"tokens"
-				]
-			},
-			"0x5183e1b1091804bc2602586919e6880ac1cf2896": {
-				symbol: "USN",
-				name: "USN",
-				decimals: 18,
-				address: "0x5183e1b1091804bc2602586919e6880ac1cf2896",
-				logoURI: "https://tokens.1inch.io/0x5183e1b1091804bc2602586919e6880ac1cf2896.png",
 				tags: [
 					"tokens"
 				]
