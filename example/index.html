@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="spot-price.js"></script>
+  </head>
+  <body>
+    <h2>Query</h2><pre id="result-query">Waiting for data</pre><br>
+    <script>
+      const init = async () => {
+        let data = await axios.post('https://bsc-dataseed.binance.org', {"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":0});
+        data.result = parseInt(data.result);
+        document.getElementById("result-query").textContent = JSON.stringify(data, undefined, 2);
+      };
+      init();
+    </script>
+  </body>
+</html>
