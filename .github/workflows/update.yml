@@ -27,7 +27,9 @@ jobs:
         run: npm install
 
       - name: Fetch latest data
-        run: npm run ci:update
+        run: |
+          npm run ci:update
+          npm run build
 
       - name: Import GPG key
         id: import_gpg
