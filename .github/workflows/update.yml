@@ -29,7 +29,7 @@ jobs:
       - name: Fetch latest data
         run: npm run ci:update
 
-      - name: (Optional) Import GPG key
+      - name: Import GPG key
         id: import_gpg
         uses: crazy-max/ghaction-import-gpg@v4
         with:
@@ -37,12 +37,12 @@ jobs:
           git_user_signingkey: true
           git_commit_gpgsign: true
 
-      - name: (Changeme) Add to git repo
+      - name: Add to git repo
         run: |
           git add .
           git config --global user.name "Ayanami Tech"
           git config --global user.email "ayanamitech@protonmail.com"
-          git commit --allow-empty -m "Automated stats update"
+          git commit --allow-empty -m "Automated chain & token data update"
       - name: Push
         uses: ad-m/github-push-action@master
         with:
