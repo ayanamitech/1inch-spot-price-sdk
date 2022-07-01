@@ -2,5 +2,79 @@
 <a href="#1inch-spot-price-sdk" id="1inch-spot-price-sdk" style="color: inherit; text-decoration: none;">
   <h1>1inch-spot-price-sdk</h1>
 </a>
+<p><a href="https://github.com/ayanamitech/1inch-spot-price-sdk/actions"><img src="https://github.com/ayanamitech/1inch-spot-price-sdk/actions/workflows/test.yml/badge.svg" alt="Build Status"></a>
+<a href="https://npmjs.org/package/1inch-spot-price-sdk"><img src="https://img.shields.io/npm/v/1inch-spot-price-sdk.svg" alt="NPM Package Version"></a>
+<a href="https://npmjs.org/package/1inch-spot-price-sdk"><img src="https://img.shields.io/npm/dm/1inch-spot-price-sdk.svg" alt="NPM Package Downloads"></a>
+<a href="https://snyk.io/test/github/ayanamitech/1inch-spot-price-sdk"><img src="https://snyk.io/test/github/ayanamitech/1inch-spot-price-sdk/badge.svg?style=flat-square" alt="Known Vulnerabilities"></a>
+<a href="https://github.com/ayanamitech/1inch-spot-price-sdk"><img src="https://img.shields.io/badge/dynamic/json?color=green&label=Views&query=uniques&url=https://github.com/ayanamitech/node-github-repo-stats/blob/main/data/ayanamitech/1inch-spot-price-sdk/views.json?raw=True&logo=github" alt="GitHub Views"></a>
+<a href="https://github.com/ayanamitech/1inch-spot-price-sdk"><img src="https://img.shields.io/badge/dynamic/json?color=success&label=Clone&query=uniques&url=https://github.com/ayanamitech/node-github-repo-stats/blob/main/data/ayanamitech/1inch-spot-price-sdk/clone.json?raw=True&logo=github" alt="GitHub Clones"></a>
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License: MIT"></a></p>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#usage">Usage</a><ul>
+<li><a href="#browser">Browser</a></li>
+<li><a href="#example">Example</a></li>
+</ul>
+</li>
+</ul>
+
+<a href="#about" id="about" style="color: inherit; text-decoration: none;">
+  <h2>About</h2>
+</a>
+<blockquote>
 <p>Typescript module to use Spot Price Aggregator for 1inch supported chains.</p>
+</blockquote>
+<p><code>1inch-spot-price-sdk</code> is a TypeScript / Javascript implementation of <a href="https://docs.1inch.io/docs/spot-price-aggregator/introduction">1inch&#39;s Spot Price Aggregator</a> based on <a href="https://docs.ethers.io/v5/">ethers.js</a> library to fetch aggregated on-chain token prices without hassle.</p>
+<p>Using this library, you don&#39;t need any kind of blockchain knowledge to query dex prices, it would be easy as</p>
+<pre><code class="language-js"><span class="hl-0">import</span><span class="hl-1"> </span><span class="hl-2">OneInchSpotPrice</span><span class="hl-1"> </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&#39;1inch-spot-price-sdk&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// It will query ETH/USDT price from the aggregated liquidity of Ethereum Dexes</span><br/><span class="hl-2">OneInchSpotPrice</span><span class="hl-1">.</span><span class="hl-5">getRate</span><span class="hl-1">(</span><span class="hl-3">&#39;ETH&#39;</span><span class="hl-1">, </span><span class="hl-3">&#39;USDT&#39;</span><span class="hl-1">).</span><span class="hl-5">then</span><span class="hl-1">(</span><span class="hl-2">rate</span><span class="hl-1"> </span><span class="hl-6">=&gt;</span><span class="hl-1"> </span><span class="hl-2">console</span><span class="hl-1">.</span><span class="hl-5">log</span><span class="hl-1">(</span><span class="hl-2">rate</span><span class="hl-1">));</span>
+</code></pre>
+
+<a href="#features" id="features" style="color: inherit; text-decoration: none;">
+  <h2>Features</h2>
+</a>
+<ul>
+<li>Embedded list of tokens supported by 1inch inside the library (No need to query 1inch api endpoint!)</li>
+<li>Embedded list of chains with public rpc endpoint aggregated from chainid.network &amp; <a href="https://chainlist.org/">https://chainlist.org/</a></li>
+<li>Supports <a href="https://github.com/ayanamitech/web3-providers-axios">web3-providers-axios</a> by default for querying the fastest returned result from public rpc endpoints. (You can also bring your ethers provider as an alternative).</li>
+<li>Returns real-time on-chain dex price rate as string value so that it could be read without any help from an external math library.</li>
+</ul>
+
+<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+  <h2>Installation</h2>
+</a>
+<p><strong>Node.js</strong></p>
+<pre><code class="language-sh"><span class="hl-1">npm install 1inch-spot-price-sdk</span>
+</code></pre>
+
+<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
+  <h2>Documentation</h2>
+</a>
+<p><a href="https://ayanamitech.github.io/1inch-spot-price-sdk">https://ayanamitech.github.io/1inch-spot-price-sdk</a></p>
+
+<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+  <h2>Usage</h2>
+</a>
+
+<a href="#browser" id="browser" style="color: inherit; text-decoration: none;">
+  <h3>Browser</h3>
+</a>
+<blockquote>
+<p>WARN: We recommend hosting and controlling your own copy for security reasons</p>
+</blockquote>
+<pre><code class="language-html"><span class="hl-7">&lt;</span><span class="hl-8">script</span><span class="hl-9"> </span><span class="hl-10">src</span><span class="hl-9">=</span><span class="hl-11">&quot;https://cdn.jsdelivr.net/npm/1inch-spot-price-sdk@latest&quot;</span><span class="hl-7">&gt;&lt;/</span><span class="hl-8">script</span><span class="hl-7">&gt;</span>
+</code></pre>
+<pre><code class="language-html"><span class="hl-7">&lt;</span><span class="hl-8">script</span><span class="hl-9"> </span><span class="hl-10">src</span><span class="hl-9">=</span><span class="hl-11">&quot;https://unpkg.com/1inch-spot-price-sdk@latest&quot;</span><span class="hl-7">&gt;&lt;/</span><span class="hl-8">script</span><span class="hl-7">&gt;</span>
+</code></pre>
+<p>Note that it would be helpful to setup the Subresource Integrity hash to ensure that the imported library has the desired codes.</p>
+<p>For more info, see <a href="https://www.srihash.org/">https://www.srihash.org/</a>.</p>
+
+<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+  <h3>Example</h3>
+</a>
+<pre><code class="language-js"><span class="hl-4">// CommonJS</span><br/><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-12">OneInchSpotPrice</span><span class="hl-1"> = </span><span class="hl-5">require</span><span class="hl-1">(</span><span class="hl-3">&#39;1inch-spot-price-sdk&#39;</span><span class="hl-1">);</span><br/><br/><span class="hl-2">or</span><br/><br/><span class="hl-4">// ModuleJS / TypeScript</span><br/><span class="hl-0">import</span><span class="hl-1"> </span><span class="hl-2">OneInchSpotPrice</span><span class="hl-1"> </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&#39;1inch-spot-price-sdk&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// It will query ETH/USDT price from the aggregated liquidity of Ethereum Dexes</span><br/><span class="hl-2">OneInchSpotPrice</span><span class="hl-1">.</span><span class="hl-5">getRate</span><span class="hl-1">(</span><span class="hl-3">&#39;ETH&#39;</span><span class="hl-1">, </span><span class="hl-3">&#39;USDT&#39;</span><span class="hl-1">).</span><span class="hl-5">then</span><span class="hl-1">(</span><span class="hl-2">rate</span><span class="hl-1"> </span><span class="hl-6">=&gt;</span><span class="hl-1"> </span><span class="hl-2">console</span><span class="hl-1">.</span><span class="hl-5">log</span><span class="hl-1">(</span><span class="hl-2">rate</span><span class="hl-1">));</span>
+</code></pre>
+<p>Please checkout <a href="./types/src/index.d.ts">Type Definition</a> for required parameters and expected output.</p>
 </div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Exports</a></li></ul></nav><nav class="tsd-navigation secondary menu-sticky"><ul><li class="tsd-kind-variable"><a href="modules.html#default" class="tsd-kind-icon">default</a></li><li class="tsd-kind-function"><a href="modules.html#getMultiRates" class="tsd-kind-icon">get<wbr/>Multi<wbr/>Rates</a></li><li class="tsd-kind-function"><a href="modules.html#getRate" class="tsd-kind-icon">get<wbr/>Rate</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>
