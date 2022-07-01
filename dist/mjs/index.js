@@ -20081,7 +20081,7 @@ function getTokens(tokens, wrappedToken, srcToken, dstToken, chainId) {
     DstTokenDecimals
   ];
 }
-async function getRate(srcToken, dstToken, chainId, provider) {
+async function getRate(srcToken, dstToken, chainId, provider, providerOptions, axiosOptions) {
   const ChainID = chainId ? chainId : provider ? await provider.getNetwork().then((r) => r.chainId) : 1;
   const config = Config.find((cfg) => cfg.chainId === ChainID);
   if (config === void 0) {
@@ -20090,7 +20090,7 @@ async function getRate(srcToken, dstToken, chainId, provider) {
   const [SrcToken, DstToken, SrcTokenDecimals, DstTokenDecimals] = getTokens(config.tokens, config.wrappedToken, srcToken, dstToken, ChainID);
   let Provider = provider;
   if (provider === void 0) {
-    Provider = new ethers.providers.Web3Provider(new Web3AxiosProvider(config.rpc.join(", ")));
+    Provider = new ethers.providers.Web3Provider(new Web3AxiosProvider(config.rpc.join(", "), providerOptions, axiosOptions));
   }
   const OffchainOracle = new ethers.Contract(config.oracle, OffchainABI, Provider);
   const result = await OffchainOracle.getRate(SrcToken, DstToken, false).then((rate) => {
@@ -20101,7 +20101,7 @@ async function getRate(srcToken, dstToken, chainId, provider) {
   });
   return result;
 }
-async function getMultiRates(srcToken, dstToken, chainId, provider) {
+async function getMultiRates(srcToken, dstToken, chainId, provider, providerOptions, axiosOptions) {
   const ChainID = chainId ? chainId : provider ? await provider.getNetwork().then((r) => r.chainId) : 1;
   const config = Config.find((cfg) => cfg.chainId === ChainID);
   if (config === void 0) {
@@ -20116,7 +20116,7 @@ async function getMultiRates(srcToken, dstToken, chainId, provider) {
   }
   let Provider = provider;
   if (provider === void 0) {
-    Provider = new ethers.providers.Web3Provider(new Web3AxiosProvider(config.rpc.join(", ")));
+    Provider = new ethers.providers.Web3Provider(new Web3AxiosProvider(config.rpc.join(", "), providerOptions, axiosOptions));
   }
   const OffchainOracle = new ethers.Contract(config.oracle, OffchainABI, Provider);
   const Multicall = new ethers.Contract(config.multicall, MulticallABI, Provider);

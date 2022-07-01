@@ -6,6 +6,7 @@ import Web3AxiosProvider from 'web3-providers-axios';
 import { BigNumber } from 'bignumber.js';
 import type { Provider } from '@ethersproject/abstract-provider';
 import type { BigNumberish } from 'ethers';
+import type { HttpProviderOptions, AxiosAutoOptions } from 'web3-providers-axios';
 
 BigNumber.config({
   ROUNDING_MODE: BigNumber.ROUND_DOWN,
@@ -70,7 +71,7 @@ function getTokens(tokens: tokens, wrappedToken: string, srcToken: string, dstTo
  * @param provider Ethers.js compatible provider (for full list please refer https://docs.ethers.io/v5/api/providers/)
  * @returns price of srcToken against dstToken wrapped by string after the promise is resolved.
  */
-export async function getRate(srcToken: string, dstToken: string, chainId?: number, provider?: Provider): Promise<string> {
+export async function getRate(srcToken: string, dstToken: string, chainId?: number, provider?: Provider, providerOptions?: HttpProviderOptions, axiosOptions?: AxiosAutoOptions): Promise<string> {
   const ChainID = chainId ? chainId : provider ? await provider.getNetwork().then((r) => r.chainId) : 1;
   const config = Config.find(cfg => cfg.chainId === ChainID);
   if (config === undefined) {
@@ -81,7 +82,7 @@ export async function getRate(srcToken: string, dstToken: string, chainId?: numb
 
   let Provider: Provider | undefined = provider;
   if (provider === undefined) {
-    Provider = new ethers.providers.Web3Provider(new Web3AxiosProvider(config.rpc.join(', ')));
+    Provider = new ethers.providers.Web3Provider(new Web3AxiosProvider(config.rpc.join(', '), providerOptions, axiosOptions));
   }
 
   const OffchainOracle = new ethers.Contract(config.oracle, OffchainABI, Provider);
@@ -105,7 +106,7 @@ export async function getRate(srcToken: string, dstToken: string, chainId?: numb
  * @param provider Ethers.js compatible provider (for full list please refer https://docs.ethers.io/v5/api/providers/)
  * @returns Array of price for srcTokens against dstTokens wrapped by string after the promise is resolved.
  */
-export async function getMultiRates(srcToken: string[], dstToken: string[], chainId?: number, provider?: Provider): Promise<string[]> {
+export async function getMultiRates(srcToken: string[], dstToken: string[], chainId?: number, provider?: Provider, providerOptions?: HttpProviderOptions, axiosOptions?: AxiosAutoOptions): Promise<string[]> {
   const ChainID = chainId ? chainId : provider ? await provider.getNetwork().then((r) => r.chainId) : 1;
   const config = Config.find(cfg => cfg.chainId === ChainID);
   if (config === undefined) {
@@ -123,7 +124,7 @@ export async function getMultiRates(srcToken: string[], dstToken: string[], chai
 
   let Provider: Provider | undefined = provider;
   if (provider === undefined) {
-    Provider = new ethers.providers.Web3Provider(new Web3AxiosProvider(config.rpc.join(', ')));
+    Provider = new ethers.providers.Web3Provider(new Web3AxiosProvider(config.rpc.join(', '), providerOptions, axiosOptions));
   }
 
   const OffchainOracle = new ethers.Contract(config.oracle, OffchainABI, Provider);

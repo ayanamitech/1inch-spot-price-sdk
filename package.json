@@ -1,6 +1,6 @@
 {
   "name": "1inch-spot-price-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Typescript module to use Spot Price Aggregator for 1inch supported chains.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/mjs/index.js",
@@ -53,7 +53,7 @@
     "assert": "^2.0.0",
     "assertion-error": "^2.0.0",
     "axios": "^0.27.2",
-    "axios-auto": "^0.28.8",
+    "axios-auto": "^0.28.9",
     "esbuild": "^0.14.42",
     "esbuild-loader": "^2.19.0",
     "eslint": "^8.16.0",
@@ -77,6 +77,6 @@
   "dependencies": {
     "bignumber.js": "^9.0.2",
     "ethers": "^5.6.9",
-    "web3-providers-axios": "^1.7.8"
+    "web3-providers-axios": "^1.7.9"
   }
 }
