@@ -10879,6 +10879,16 @@ var Config = [
 				tags: [
 					"tokens"
 				]
+			},
+			"0xe405de8f52ba7559f9df3c368500b6e6ae6cee49": {
+				symbol: "sETH",
+				name: "Synth sETH",
+				decimals: 18,
+				address: "0xe405de8f52ba7559f9df3c368500b6e6ae6cee49",
+				logoURI: "https://tokens.1inch.io/0xe405de8f52ba7559f9df3c368500b6e6ae6cee49.png",
+				tags: [
+					"tokens"
+				]
 			}
 		}
 	},
@@ -20035,6 +20045,16 @@ var Config = [
 				decimals: 8,
 				address: "0x293074789b247cab05357b08052468b5d7a23c5a",
 				logoURI: "https://tokens.1inch.io/0x293074789b247cab05357b08052468b5d7a23c5a.png",
+				tags: [
+					"tokens"
+				]
+			},
+			"0x4988a896b1227218e4a686fde5eabdcabd91571f": {
+				symbol: "USDT",
+				name: "Tether USD",
+				decimals: 6,
+				address: "0x4988a896b1227218e4a686fde5eabdcabd91571f",
+				logoURI: "https://tokens.1inch.io/0x4988a896b1227218e4a686fde5eabdcabd91571f.png",
 				tags: [
 					"tokens"
 				]
