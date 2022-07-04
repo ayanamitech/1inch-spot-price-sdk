@@ -20,6 +20,7 @@
     "build:browser": "webpack",
     "build:copy": "node example/copyfile.js",
     "ci:update": "node script/update.js",
+    "ci:commit": "node script/commit.js",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix"
   },
@@ -67,7 +68,7 @@
     "rimraf": "^3.0.2",
     "rollup": "^2.75.3",
     "rollup-plugin-esbuild": "^4.9.1",
-    "simple-git": "^3.7.1",
+    "simple-git": "^3.10.0",
     "ts-node": "^10.8.0",
     "typedoc": "^0.22.17",
     "typescript": "^4.7.2",

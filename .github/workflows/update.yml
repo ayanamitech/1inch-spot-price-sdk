@@ -40,11 +40,8 @@ jobs:
           git_commit_gpgsign: true
 
       - name: Add to git repo
-        run: |
-          git add .
-          git config --global user.name "Ayanami Tech"
-          git config --global user.email "ayanamitech@protonmail.com"
-          git commit --allow-empty -m "Automated chain & token data update"
+        run: npm run ci:commit
+
       - name: Push
         uses: ad-m/github-push-action@master
         with:
