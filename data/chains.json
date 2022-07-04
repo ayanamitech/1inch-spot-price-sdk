@@ -64,6 +64,110 @@
     "slip44": 40
   },
   {
+    "name": "Ropsten",
+    "title": "Ethereum Testnet Ropsten",
+    "chain": "ETH",
+    "network": "testnet",
+    "rpc": [
+      "https://ropsten.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+      "wss://ropsten.infura.io/ws/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+      "https://rpc.ankr.com/eth_ropsten"
+    ],
+    "faucets": [
+      "http://fauceth.komputing.org?chain=3&address=${ADDRESS}",
+      "https://faucet.ropsten.be?${ADDRESS}"
+    ],
+    "nativeCurrency": {
+      "name": "Ropsten Ether",
+      "symbol": "ROP",
+      "decimals": 18
+    },
+    "infoURL": "https://github.com/ethereum/ropsten",
+    "shortName": "rop",
+    "chainId": 3,
+    "networkId": 3,
+    "ens": {
+      "registry": "0x112234455c3a32fd11230c42e7bccd4a84e02010"
+    },
+    "explorers": [
+      {
+        "name": "etherscan",
+        "url": "https://ropsten.etherscan.io",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Rinkeby",
+    "title": "Ethereum Testnet Rinkeby",
+    "chain": "ETH",
+    "network": "testnet",
+    "rpc": [
+      "https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+      "wss://rinkeby.infura.io/ws/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+      "https://rpc.ankr.com/eth_rinkeby"
+    ],
+    "faucets": [
+      "http://fauceth.komputing.org?chain=4&address=${ADDRESS}",
+      "https://faucet.rinkeby.io"
+    ],
+    "nativeCurrency": {
+      "name": "Rinkeby Ether",
+      "symbol": "RIN",
+      "decimals": 18
+    },
+    "infoURL": "https://www.rinkeby.io",
+    "shortName": "rin",
+    "chainId": 4,
+    "networkId": 4,
+    "ens": {
+      "registry": "0xe7410170f87102df0055eb195163a03b7f2bff4a"
+    },
+    "explorers": [
+      {
+        "name": "etherscan-rinkeby",
+        "url": "https://rinkeby.etherscan.io",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Görli",
+    "title": "Ethereum Testnet Görli",
+    "chain": "ETH",
+    "network": "testnet",
+    "rpc": [
+      "https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+      "wss://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+      "https://rpc.goerli.mudit.blog",
+      "https://rpc.ankr.com/eth_goerli"
+    ],
+    "faucets": [
+      "http://fauceth.komputing.org?chain=5&address=${ADDRESS}",
+      "https://goerli-faucet.slock.it?address=${ADDRESS}",
+      "https://faucet.goerli.mudit.blog"
+    ],
+    "nativeCurrency": {
+      "name": "Görli Ether",
+      "symbol": "GOR",
+      "decimals": 18
+    },
+    "infoURL": "https://goerli.net/#about",
+    "shortName": "gor",
+    "chainId": 5,
+    "networkId": 5,
+    "ens": {
+      "registry": "0x112234455c3a32fd11230c42e7bccd4a84e02010"
+    },
+    "explorers": [
+      {
+        "name": "etherscan-goerli",
+        "url": "https://goerli.etherscan.io",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
     "name": "ThaiChain",
     "chain": "TCH",
     "rpc": [
@@ -3016,6 +3120,36 @@
     ]
   },
   {
+    "name": "Kava EVM",
+    "chain": "KAVA",
+    "network": "mainnet",
+    "rpc": [
+      "https://evm.kava.io",
+      "https://evm2.kava.io",
+      "wss://wevm.kava.io",
+      "wss://wevm2.kava.io"
+    ],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "Kava",
+      "symbol": "KAVA",
+      "decimals": 18
+    },
+    "infoURL": "https://www.kava.io",
+    "shortName": "kava",
+    "chainId": 2222,
+    "networkId": 2222,
+    "icon": "kava",
+    "explorers": [
+      {
+        "name": "Kava EVM Explorer",
+        "url": "https://explorer.kava.io",
+        "standard": "EIP3091",
+        "icon": "kava"
+      }
+    ]
+  },
+  {
     "name": "Kortho Mainnet",
     "chain": "Kortho Chain",
     "rpc": [
@@ -3080,6 +3214,35 @@
         "name": "bittexscan",
         "url": "https://bittexscan.com",
         "icon": "etherscan",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Fantom Testnet",
+    "chain": "FTM",
+    "rpc": [
+      "https://rpc.testnet.fantom.network",
+      "https://rpc.ankr.com/fantom_testnet"
+    ],
+    "faucets": [
+      "https://faucet.fantom.network"
+    ],
+    "nativeCurrency": {
+      "name": "Fantom",
+      "symbol": "FTM",
+      "decimals": 18
+    },
+    "infoURL": "https://docs.fantom.foundation/quick-start/short-guide#fantom-testnet",
+    "shortName": "tftm",
+    "chainId": 4002,
+    "networkId": 4002,
+    "icon": "fantom",
+    "explorers": [
+      {
+        "name": "ftmscan",
+        "url": "https://testnet.ftmscan.com",
+        "icon": "ftmscan",
         "standard": "EIP3091"
       }
     ]
@@ -3925,6 +4088,34 @@
     "networkId": 43110
   },
   {
+    "name": "Avalanche Fuji Testnet",
+    "chain": "AVAX",
+    "rpc": [
+      "https://api.avax-test.network/ext/bc/C/rpc",
+      "https://rpc.ankr.com/avalanche_fuji",
+      "https://rpc.ankr.com/avalanche_fuji-c"
+    ],
+    "faucets": [
+      "https://faucet.avax-test.network/"
+    ],
+    "nativeCurrency": {
+      "name": "Avalanche",
+      "symbol": "AVAX",
+      "decimals": 18
+    },
+    "infoURL": "https://cchain.explorer.avax-test.network",
+    "shortName": "Fuji",
+    "chainId": 43113,
+    "networkId": 1,
+    "explorers": [
+      {
+        "name": "snowtrace",
+        "url": "https://testnet.snowtrace.io",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
     "name": "Avalanche C-Chain",
     "chain": "AVAX",
     "rpc": [
@@ -4179,6 +4370,36 @@
       {
         "name": "thinkiumscan",
         "url": "https://chain103.thinkiumscan.net",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Mumbai",
+    "title": "Polygon Testnet Mumbai",
+    "chain": "Polygon",
+    "rpc": [
+      "https://matic-mumbai.chainstacklabs.com",
+      "https://rpc-mumbai.maticvigil.com",
+      "https://matic-testnet-archive-rpc.bwarelabs.com",
+      "https://rpc.ankr.com/polygon_mumbai"
+    ],
+    "faucets": [
+      "https://faucet.polygon.technology/"
+    ],
+    "nativeCurrency": {
+      "name": "MATIC",
+      "symbol": "MATIC",
+      "decimals": 18
+    },
+    "infoURL": "https://polygon.technology/",
+    "shortName": "maticmum",
+    "chainId": 80001,
+    "networkId": 80001,
+    "explorers": [
+      {
+        "name": "polygonscan",
+        "url": "https://mumbai.polygonscan.com",
         "standard": "EIP3091"
       }
     ]
