@@ -1169,7 +1169,14 @@
     "rpc": [
       "https://connect.novanetwork.io",
       "https://0x57.redjackstudio.com",
-      "https://rpc.novanetwork.io:9070"
+      "https://rpc.novanetwork.io:9070",
+      "http://dataseed-0.rpc.novanetwork.io:8545",
+      "http://dataseed-1.rpc.novanetwork.io:8545",
+      "http://dataseed-2.rpc.novanetwork.io:8545",
+      "http://dataseed-3.rpc.novanetwork.io:8545",
+      "http://dataseed-4.rpc.novanetwork.io:8545",
+      "http://dataseed-5.rpc.novanetwork.io:8545",
+      "http://dataseed-6.rpc.novanetwork.io:8545"
     ],
     "faucets": [],
     "nativeCurrency": {
@@ -2412,7 +2419,8 @@
     "name": "Callisto Mainnet",
     "chain": "CLO",
     "rpc": [
-      "https://clo-geth.0xinfra.com"
+      "https://clo-geth.0xinfra.com",
+      "https://rpc.callisto.network"
     ],
     "faucets": [],
     "nativeCurrency": {
@@ -3597,7 +3605,9 @@
     "chain": "Evmos",
     "rpc": [
       "https://eth.bd.evmos.org:8545",
-      "https://evmos-mainnet.gateway.pokt.network/v1/lb/627586ddea1b320039c95205"
+      "https://evmos-mainnet.gateway.pokt.network/v1/lb/627586ddea1b320039c95205",
+      "https://evmos-json-rpc.stakely.io",
+      "https://jsonrpc-evmos-ia.notional.ventures"
     ],
     "faucets": [],
     "nativeCurrency": {
