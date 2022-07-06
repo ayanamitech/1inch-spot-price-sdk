@@ -1,9 +1,19 @@
 import type { Provider } from '@ethersproject/abstract-provider';
+import type { fetchConfig } from 'axios-auto';
 import type { HttpProviderOptions, AxiosAutoOptions } from 'web3-providers-axios';
-export declare function getRate(srcToken: string, dstToken: string, chainId?: number, provider?: Provider, providerOptions?: HttpProviderOptions, axiosOptions?: AxiosAutoOptions): Promise<string>;
-export declare function getMultiRates(srcToken: string[], dstToken: string[], chainId?: number, provider?: Provider, providerOptions?: HttpProviderOptions, axiosOptions?: AxiosAutoOptions): Promise<string[]>;
-declare const _default: {
-    getRate: typeof getRate;
-    getMultiRates: typeof getMultiRates;
-};
-export default _default;
+export default class OneInchSpotPrice {
+    chainId: number;
+    provider: Provider;
+    private configURL;
+    private config;
+    private initializer;
+    private isInititialized;
+    constructor(chainId?: number, provider?: Provider, axiosConfig?: fetchConfig, providerOptions?: HttpProviderOptions, axiosOptions?: AxiosAutoOptions);
+    private init;
+    private getDecimals;
+    private getTokenAddress;
+    private getTokens;
+    initialize(): Promise<void>;
+    getRate(srcToken: string, dstToken: string): Promise<string>;
+    getMultiRates(srcToken: string[], dstToken: string[]): Promise<string[]>;
+}

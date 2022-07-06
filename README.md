@@ -27,8 +27,11 @@ Using this library, you don't need any kind of blockchain knowledge to query dex
 ```js
 import OneInchSpotPrice from '1inch-spot-price-sdk';
 
+// Initialize the sdk
+const spotPrice = new OneInchSpotPrice();
+
 // It will query ETH/USDT price from the aggregated liquidity of Ethereum Dexes
-OneInchSpotPrice.getRate('ETH', 'USDT').then(rate => console.log(rate));
+spotPrice.getRate('ETH', 'USDT').then(rate => console.log(rate));
 ```
 
 ## Features
@@ -79,8 +82,33 @@ or
 // ModuleJS / TypeScript
 import OneInchSpotPrice from '1inch-spot-price-sdk';
 
+// Initialize the sdk
+const spotPrice = new OneInchSpotPrice();
+
 // It will query ETH/USDT price from the aggregated liquidity of Ethereum Dexes
-OneInchSpotPrice.getRate('ETH', 'USDT').then(rate => console.log(rate));
+spotPrice.getRate('ETH', 'USDT').then(rate => console.log(rate));
+```
+
+#### With Promise.all()
+
+```js
+import OneInchSpotPrice from '1inch-spot-price-sdk';
+
+// Initialize the sdk
+const spotPrice = new OneInchSpotPrice();
+
+const getRates = async () => {
+  // Fetch the config data before calling getRate / getMultiRates
+  await spotPrice.initialize();
+
+  console.log(await Promise.all([
+    spotPrice.getRate('ETH', 'USDT'),
+    spotPrice.getRate('WBTC', 'USDT'),
+    spotPrice.getRate('ETH', 'WBTC')
+  ]));
+};
+
+getRates();
 ```
 
 Please checkout [Type Definition](./types/src/index.d.ts) for required parameters and expected output.

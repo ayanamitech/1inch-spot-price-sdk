@@ -1,4 +1,4 @@
-import { getRate, getMultiRates } from './index';
+import OneInchSpotPrice from './index';
 import { strict as assert } from 'assert';
 import * as axios from 'axios-auto';
 import { BigNumber } from 'bignumber.js';
@@ -31,7 +31,8 @@ const toMultiFetch: [string, string, string][] = [
 ];
 
 const fetchRates = async (price1: string, price2: string, chainId: number, ticker: string): Promise<[BigNumber, BigNumber, string]> => {
-  const rate = await getRate(price1, price2, chainId).then(r => new BigNumber(r));
+  const spotPrice = new OneInchSpotPrice(chainId);
+  const rate = await spotPrice.getRate(price1, price2).then(r => new BigNumber(r));
   const binanceRate = await axios.get(`${BINANCE}${ticker}`).then(r => new BigNumber(r.price));
   return [
     rate,
@@ -49,7 +50,9 @@ const multiFetchRates = async (multiFetch: [string, string, string][]): Promise<
     token2.push(args[1]);
   });
 
-  return await getMultiRates(token1, token2).then(async r => await Promise.all(r.map(async rate => {
+  const spotPrice = new OneInchSpotPrice();
+
+  return await spotPrice.getMultiRates(token1, token2).then(async r => await Promise.all(r.map(async rate => {
     const ticker = multiFetch[r.indexOf(rate)][2];
     const binanceRate = await axios.get(`${BINANCE}${ticker}`).then(result => new BigNumber(result.price));
     return [
