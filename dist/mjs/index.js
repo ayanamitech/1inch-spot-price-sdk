@@ -24,7 +24,7 @@
  */
 import { get } from 'axios-auto';
 import { ethers, BigNumber as BigNumber$1 } from 'ethers';
-import Web3AxiosProvider from 'web3-providers-axios';
+import AxiosProvider from 'ethers-axios-provider';
 import { BigNumber } from 'bignumber.js';
 
 var OffchainABI = [
@@ -529,10 +529,10 @@ BigNumber.config({
   EXPONENTIAL_AT: 1e3
 });
 class OneInchSpotPrice {
-  constructor(chainId, provider, axiosConfig, providerOptions, axiosOptions) {
+  constructor(chainId, provider, axiosConfig, axiosOptions) {
     this.configURL = "https://raw.githubusercontent.com/ayanamitech/1inch-spot-price-sdk/main/data/1inch.json";
     this.chainId = 1;
-    this.provider = new ethers.providers.Web3Provider(new Web3AxiosProvider(""));
+    this.provider = new AxiosProvider("");
     this.config = {
       "name": "",
       "coin": "",
@@ -544,20 +544,20 @@ class OneInchSpotPrice {
       "tokens": [{ "": {} }]
     };
     this.isInititialized = false;
-    this.initializer = () => this.init(chainId, provider, axiosConfig, providerOptions, axiosOptions).then((init) => {
+    this.initializer = () => this.init(chainId, provider, axiosConfig, axiosOptions).then((init) => {
       this.chainId = init[0];
       this.provider = init[1];
       this.config = init[2];
       this.isInititialized = true;
     });
   }
-  async init(chainId, provider, axiosConfig, providerOptions, axiosOptions) {
+  async init(chainId, provider, axiosConfig, axiosOptions) {
     const ChainID = chainId ? chainId : provider ? await provider.getNetwork().then((r) => r.chainId) : 1;
     const getConfig = await get(this.configURL, axiosConfig).then((config) => config.find((cfg) => cfg.chainId === ChainID));
     if (getConfig === void 0) {
       throw new Error(`ChainID ${ChainID} not supported`);
     }
-    const Provider = provider ? provider : new ethers.providers.Web3Provider(new Web3AxiosProvider(getConfig.rpc.join(", "), providerOptions, axiosOptions));
+    const Provider = provider ? provider : new AxiosProvider(getConfig.rpc.join(", "), axiosOptions);
     return [
       ChainID,
       Provider,

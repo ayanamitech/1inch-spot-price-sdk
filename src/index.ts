@@ -2,12 +2,12 @@ import OffchainABI from '../data/OffchainOracle.json';
 import MulticallABI from '../data/Multicall.json';
 import { get } from 'axios-auto';
 import { ethers, BigNumber as BN } from 'ethers';
-import Web3AxiosProvider from 'web3-providers-axios';
+import AxiosProvider from 'ethers-axios-provider';
 import { BigNumber } from 'bignumber.js';
 import type { Provider } from '@ethersproject/abstract-provider';
 import type { BigNumberish } from 'ethers';
 import type { fetchConfig } from 'axios-auto';
-import type { HttpProviderOptions, AxiosAutoOptions } from 'web3-providers-axios';
+import type { extraConfig } from 'ethers-axios-provider';
 
 BigNumber.config({
   ROUNDING_MODE: BigNumber.ROUND_DOWN,
@@ -15,11 +15,11 @@ BigNumber.config({
   EXPONENTIAL_AT: 1000
 });
 
-type tokens = {
+export type tokens = {
   [key: string]: any;
 };
 
-type Config = {
+export type Config = {
   name: string,
   coin: string,
   chainId: number,
@@ -38,10 +38,10 @@ export default class OneInchSpotPrice {
   private initializer: () => void;
   private isInititialized: boolean;
 
-  public constructor(chainId?: number, provider?: Provider, axiosConfig?: fetchConfig, providerOptions?: HttpProviderOptions, axiosOptions?: AxiosAutoOptions) {
+  public constructor(chainId?: number, provider?: Provider, axiosConfig?: fetchConfig, axiosOptions?: extraConfig) {
     // Mock value to address Property has no initializer and is not definitely assigned in the constructor. error
     this.chainId = 1;
-    this.provider = new ethers.providers.Web3Provider(new Web3AxiosProvider(''));
+    this.provider = new AxiosProvider('');
     this.config = {
       'name': '',
       'coin': '',
@@ -53,7 +53,7 @@ export default class OneInchSpotPrice {
       'tokens': [{'': {}}]
     };
     this.isInititialized = false;
-    this.initializer = () => this.init(chainId, provider, axiosConfig, providerOptions, axiosOptions)
+    this.initializer = () => this.init(chainId, provider, axiosConfig, axiosOptions)
       .then(init => {
         this.chainId = init[0];
         this.provider = init[1];
@@ -62,14 +62,14 @@ export default class OneInchSpotPrice {
       });
   }
 
-  private async init(chainId?: number, provider?: Provider, axiosConfig?: fetchConfig, providerOptions?: HttpProviderOptions, axiosOptions?: AxiosAutoOptions): Promise<[number, Provider, Config]> {
+  private async init(chainId?: number, provider?: Provider, axiosConfig?: fetchConfig, axiosOptions?: extraConfig): Promise<[number, Provider, Config]> {
     const ChainID = chainId ? chainId : provider ? await provider.getNetwork().then((r) => r.chainId) : 1;
     const getConfig: Config | undefined = await get(this.configURL, axiosConfig).then(config => config.find((cfg: Config) => cfg.chainId === ChainID));
     if (getConfig === undefined) {
       throw new Error(`ChainID ${ChainID} not supported`);
     }
 
-    const Provider: Provider = provider ? provider : new ethers.providers.Web3Provider(new Web3AxiosProvider(getConfig.rpc.join(', '), providerOptions, axiosOptions));
+    const Provider: Provider = provider ? provider : new AxiosProvider(getConfig.rpc.join(', '), axiosOptions);
 
     return [
       ChainID,

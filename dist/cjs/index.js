@@ -26,12 +26,12 @@
 
 var axiosAuto = require('axios-auto');
 var ethers = require('ethers');
-var Web3AxiosProvider = require('web3-providers-axios');
+var AxiosProvider = require('ethers-axios-provider');
 var bignumber_js = require('bignumber.js');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
-var Web3AxiosProvider__default = /*#__PURE__*/_interopDefaultLegacy(Web3AxiosProvider);
+var AxiosProvider__default = /*#__PURE__*/_interopDefaultLegacy(AxiosProvider);
 
 var OffchainABI = [
 	{
@@ -535,10 +535,10 @@ bignumber_js.BigNumber.config({
   EXPONENTIAL_AT: 1e3
 });
 class OneInchSpotPrice {
-  constructor(chainId, provider, axiosConfig, providerOptions, axiosOptions) {
+  constructor(chainId, provider, axiosConfig, axiosOptions) {
     this.configURL = "https://raw.githubusercontent.com/ayanamitech/1inch-spot-price-sdk/main/data/1inch.json";
     this.chainId = 1;
-    this.provider = new ethers.ethers.providers.Web3Provider(new Web3AxiosProvider__default["default"](""));
+    this.provider = new AxiosProvider__default["default"]("");
     this.config = {
       "name": "",
       "coin": "",
@@ -550,20 +550,20 @@ class OneInchSpotPrice {
       "tokens": [{ "": {} }]
     };
     this.isInititialized = false;
-    this.initializer = () => this.init(chainId, provider, axiosConfig, providerOptions, axiosOptions).then((init) => {
+    this.initializer = () => this.init(chainId, provider, axiosConfig, axiosOptions).then((init) => {
       this.chainId = init[0];
       this.provider = init[1];
       this.config = init[2];
       this.isInititialized = true;
     });
   }
-  async init(chainId, provider, axiosConfig, providerOptions, axiosOptions) {
+  async init(chainId, provider, axiosConfig, axiosOptions) {
     const ChainID = chainId ? chainId : provider ? await provider.getNetwork().then((r) => r.chainId) : 1;
     const getConfig = await axiosAuto.get(this.configURL, axiosConfig).then((config) => config.find((cfg) => cfg.chainId === ChainID));
     if (getConfig === void 0) {
       throw new Error(`ChainID ${ChainID} not supported`);
     }
-    const Provider = provider ? provider : new ethers.ethers.providers.Web3Provider(new Web3AxiosProvider__default["default"](getConfig.rpc.join(", "), providerOptions, axiosOptions));
+    const Provider = provider ? provider : new AxiosProvider__default["default"](getConfig.rpc.join(", "), axiosOptions);
     return [
       ChainID,
       Provider,
