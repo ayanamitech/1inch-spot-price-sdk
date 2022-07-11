@@ -10158,6 +10158,26 @@
         "tags": [
           "tokens"
         ]
+      },
+      "0xddd6a0ecc3c6f6c102e5ea3d8af7b801d1a77ac8": {
+        "symbol": "UNIX",
+        "name": "UniX Gaming",
+        "decimals": 18,
+        "address": "0xddd6a0ecc3c6f6c102e5ea3d8af7b801d1a77ac8",
+        "logoURI": "https://tokens.1inch.io/0xddd6a0ecc3c6f6c102e5ea3d8af7b801d1a77ac8.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x579cea1889991f68acc35ff5c3dd0621ff29b0c9": {
+        "symbol": "IQ",
+        "name": "Everipedia IQ",
+        "decimals": 18,
+        "address": "0x579cea1889991f68acc35ff5c3dd0621ff29b0c9",
+        "logoURI": "https://tokens.1inch.io/0x579cea1889991f68acc35ff5c3dd0621ff29b0c9.png",
+        "tags": [
+          "tokens"
+        ]
       }
     }
   },
@@ -14343,6 +14363,16 @@
         "tags": [
           "tokens"
         ]
+      },
+      "0x8f49733210700d38098d7375c221c7d02f700cc8": {
+        "symbol": "PALLA",
+        "name": "Pallapay",
+        "decimals": 18,
+        "address": "0x8f49733210700d38098d7375c221c7d02f700cc8",
+        "logoURI": "https://tokens.1inch.io/0x8f49733210700d38098d7375c221c7d02f700cc8.png",
+        "tags": [
+          "tokens"
+        ]
       }
     }
   },
@@ -16721,6 +16751,56 @@
         "decimals": 18,
         "address": "0x2e1ad108ff1d8c782fcbbb89aad783ac49586756",
         "logoURI": "https://tokens.1inch.io/0x2e1ad108ff1d8c782fcbbb89aad783ac49586756.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0xdda40cdfe4a0090f42ff49f264a831402adb801a": {
+        "symbol": "DOGIRA",
+        "name": "Dogira",
+        "decimals": 9,
+        "address": "0xdda40cdfe4a0090f42ff49f264a831402adb801a",
+        "logoURI": "https://tokens.1inch.io/0xdda40cdfe4a0090f42ff49f264a831402adb801a.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x8c4476dfec8e7eedf2de3e9e9461b7c14c828d46": {
+        "symbol": "UNIX",
+        "name": "UniX Gaming (PoS)",
+        "decimals": 18,
+        "address": "0x8c4476dfec8e7eedf2de3e9e9461b7c14c828d46",
+        "logoURI": "https://tokens.1inch.io/0x8c4476dfec8e7eedf2de3e9e9461b7c14c828d46.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x02649c1ff4296038de4b9ba8f491b42b940a8252": {
+        "symbol": "XGEM",
+        "name": "Exchange Genesis Ethlas Medium",
+        "decimals": 18,
+        "address": "0x02649c1ff4296038de4b9ba8f491b42b940a8252",
+        "logoURI": "https://tokens.1inch.io/0x02649c1ff4296038de4b9ba8f491b42b940a8252.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x12c9ffe6538f20a982fd4d17912f0ca00fa82d30": {
+        "symbol": "oORC",
+        "name": "Orbit Bridge Polygon Orbit Chain",
+        "decimals": 18,
+        "address": "0x12c9ffe6538f20a982fd4d17912f0ca00fa82d30",
+        "logoURI": "https://tokens.1inch.io/0x12c9ffe6538f20a982fd4d17912f0ca00fa82d30.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0xb9638272ad6998708de56bbc0a290a1de534a578": {
+        "symbol": "IQ",
+        "name": "Everipedia IQ (PoS)",
+        "decimals": 18,
+        "address": "0xb9638272ad6998708de56bbc0a290a1de534a578",
+        "logoURI": "https://tokens.1inch.io/0xb9638272ad6998708de56bbc0a290a1de534a578.png",
         "tags": [
           "tokens"
         ]
