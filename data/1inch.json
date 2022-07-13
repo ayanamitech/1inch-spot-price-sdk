@@ -10178,6 +10178,47 @@
         "tags": [
           "tokens"
         ]
+      },
+      "0x48f07301e9e29c3c38a80ae8d9ae771f224f1054": {
+        "symbol": "XZAR",
+        "name": "South African Tether",
+        "decimals": 18,
+        "address": "0x48f07301e9e29c3c38a80ae8d9ae771f224f1054",
+        "logoURI": "https://tokens.1inch.io/0x48f07301e9e29c3c38a80ae8d9ae771f224f1054.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0xa52bffad02b1fe3f86a543a4e81962d3b3bb01a7": {
+        "symbol": "DUCKER",
+        "name": "Duckereum",
+        "decimals": 18,
+        "address": "0xa52bffad02b1fe3f86a543a4e81962d3b3bb01a7",
+        "logoURI": "https://tokens.1inch.io/0xa52bffad02b1fe3f86a543a4e81962d3b3bb01a7.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x5cac718a3ae330d361e39244bf9e67ab17514ce8": {
+        "symbol": "COT",
+        "name": "CosplayToken",
+        "decimals": 18,
+        "address": "0x5cac718a3ae330d361e39244bf9e67ab17514ce8",
+        "logoURI": "https://tokens.1inch.io/0x5cac718a3ae330d361e39244bf9e67ab17514ce8.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x1abaea1f7c830bd89acc67ec4af516284b1bc33c": {
+        "symbol": "EUROC",
+        "name": "Euro Coin",
+        "decimals": 6,
+        "address": "0x1abaea1f7c830bd89acc67ec4af516284b1bc33c",
+        "logoURI": "https://tokens.1inch.io/0x1abaea1f7c830bd89acc67ec4af516284b1bc33c.png",
+        "eip2612": true,
+        "tags": [
+          "tokens"
+        ]
       }
     }
   },
@@ -14374,6 +14415,48 @@
         "tags": [
           "tokens"
         ]
+      },
+      "0xebd49b26169e1b52c04cfd19fcf289405df55f80": {
+        "symbol": "ORBS",
+        "name": "Orbs",
+        "decimals": 18,
+        "address": "0xebd49b26169e1b52c04cfd19fcf289405df55f80",
+        "logoURI": "https://tokens.1inch.io/0xebd49b26169e1b52c04cfd19fcf289405df55f80.png",
+        "eip2612": true,
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0xee9801669c6138e84bd50deb500827b776777d28": {
+        "symbol": "O3",
+        "name": "O3 Swap Token",
+        "decimals": 18,
+        "address": "0xee9801669c6138e84bd50deb500827b776777d28",
+        "logoURI": "https://tokens.1inch.io/0xee9801669c6138e84bd50deb500827b776777d28.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x2ed9a5c8c13b93955103b9a7c167b67ef4d568a3": {
+        "symbol": "MASK",
+        "name": "Mask Network",
+        "decimals": 18,
+        "address": "0x2ed9a5c8c13b93955103b9a7c167b67ef4d568a3",
+        "logoURI": "https://tokens.1inch.io/0x2ed9a5c8c13b93955103b9a7c167b67ef4d568a3.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x0864c156b3c5f69824564dec60c629ae6401bf2a": {
+        "symbol": "DATA",
+        "name": "Streamr",
+        "decimals": 18,
+        "address": "0x0864c156b3c5f69824564dec60c629ae6401bf2a",
+        "logoURI": "https://tokens.1inch.io/0x0864c156b3c5f69824564dec60c629ae6401bf2a.png",
+        "eip2612": true,
+        "tags": [
+          "tokens"
+        ]
       }
     }
   },
@@ -16803,6 +16886,139 @@
         "decimals": 18,
         "address": "0xb9638272ad6998708de56bbc0a290a1de534a578",
         "logoURI": "https://tokens.1inch.io/0xb9638272ad6998708de56bbc0a290a1de534a578.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x614389eaae0a6821dc49062d56bda3d9d45fa2ff": {
+        "symbol": "ORBS",
+        "name": "Orbs (PoS)",
+        "decimals": 18,
+        "address": "0x614389eaae0a6821dc49062d56bda3d9d45fa2ff",
+        "logoURI": "https://tokens.1inch.io/0x614389eaae0a6821dc49062d56bda3d9d45fa2ff.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x30de46509dbc3a491128f97be0aaf70dc7ff33cb": {
+        "symbol": "XZAR",
+        "name": "South African Tether (PoS)",
+        "decimals": 18,
+        "address": "0x30de46509dbc3a491128f97be0aaf70dc7ff33cb",
+        "logoURI": "https://tokens.1inch.io/0x30de46509dbc3a491128f97be0aaf70dc7ff33cb.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0xa9536b9c75a9e0fae3b56a96ac8edf76abc91978": {
+        "symbol": "PECO",
+        "name": "Polygon Ecosystem Index",
+        "decimals": 18,
+        "address": "0xa9536b9c75a9e0fae3b56a96ac8edf76abc91978",
+        "logoURI": "https://tokens.1inch.io/0xa9536b9c75a9e0fae3b56a96ac8edf76abc91978.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0xee9801669c6138e84bd50deb500827b776777d28": {
+        "symbol": "O3",
+        "name": "O3 Swap Token",
+        "decimals": 18,
+        "address": "0xee9801669c6138e84bd50deb500827b776777d28",
+        "logoURI": "https://tokens.1inch.io/0xee9801669c6138e84bd50deb500827b776777d28.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0xd4945a3d0de9923035521687d4bf18cc9b0c7c2a": {
+        "symbol": "LUXY",
+        "name": "LUXY",
+        "decimals": 18,
+        "address": "0xd4945a3d0de9923035521687d4bf18cc9b0c7c2a",
+        "logoURI": "https://tokens.1inch.io/0xd4945a3d0de9923035521687d4bf18cc9b0c7c2a.png",
+        "eip2612": true,
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x4e3decbb3645551b8a19f0ea1678079fcb33fb4c": {
+        "symbol": "jEUR",
+        "name": "Jarvis Synthetic Euro",
+        "decimals": 18,
+        "address": "0x4e3decbb3645551b8a19f0ea1678079fcb33fb4c",
+        "logoURI": "https://tokens.1inch.io/0x4e3decbb3645551b8a19f0ea1678079fcb33fb4c.png",
+        "eip2612": true,
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x8d520c8e66091cfd6743fe37fbe3a09505616c4b": {
+        "symbol": "COT",
+        "name": "CosplayToken (PoS)",
+        "decimals": 18,
+        "address": "0x8d520c8e66091cfd6743fe37fbe3a09505616c4b",
+        "logoURI": "https://tokens.1inch.io/0x8d520c8e66091cfd6743fe37fbe3a09505616c4b.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x2b9e7ccdf0f4e5b24757c1e1a80e311e34cb10c7": {
+        "symbol": "MASK",
+        "name": "Mask Network (PoS)",
+        "decimals": 18,
+        "address": "0x2b9e7ccdf0f4e5b24757c1e1a80e311e34cb10c7",
+        "logoURI": "https://tokens.1inch.io/0x2b9e7ccdf0f4e5b24757c1e1a80e311e34cb10c7.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x695fc8b80f344411f34bdbcb4e621aa69ada384b": {
+        "symbol": "NITRO",
+        "name": "Nitro (PoS)",
+        "decimals": 18,
+        "address": "0x695fc8b80f344411f34bdbcb4e621aa69ada384b",
+        "logoURI": "https://tokens.1inch.io/0x695fc8b80f344411f34bdbcb4e621aa69ada384b.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0xdb725f82818de83e99f1dac22a9b5b51d3d04dd4": {
+        "symbol": "GET",
+        "name": "GET Protocol (PoS)",
+        "decimals": 18,
+        "address": "0xdb725f82818de83e99f1dac22a9b5b51d3d04dd4",
+        "logoURI": "https://tokens.1inch.io/0xdb725f82818de83e99f1dac22a9b5b51d3d04dd4.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0xd78c475133731cd54dadcb430f7aae4f03c1e660": {
+        "symbol": "HOPE",
+        "name": "Firebird.Finance",
+        "decimals": 18,
+        "address": "0xd78c475133731cd54dadcb430f7aae4f03c1e660",
+        "logoURI": "https://tokens.1inch.io/0xd78c475133731cd54dadcb430f7aae4f03c1e660.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0xa936e1f747d14fc30d08272d065c8aef4ab7f810": {
+        "symbol": "WLD",
+        "name": "wLitiDAO",
+        "decimals": 18,
+        "address": "0xa936e1f747d14fc30d08272d065c8aef4ab7f810",
+        "logoURI": "https://tokens.1inch.io/0xa936e1f747d14fc30d08272d065c8aef4ab7f810.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x3a9a81d576d83ff21f26f325066054540720fc34": {
+        "symbol": "DATA",
+        "name": "Streamr",
+        "decimals": 18,
+        "address": "0x3a9a81d576d83ff21f26f325066054540720fc34",
+        "logoURI": "https://tokens.1inch.io/0x3a9a81d576d83ff21f26f325066054540720fc34.png",
+        "eip2612": true,
         "tags": [
           "tokens"
         ]
