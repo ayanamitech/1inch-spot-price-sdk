@@ -10416,7 +10416,8 @@
       "https://bscrpc.com",
       "https://bsc.mytokenpocket.vip",
       "https://binance.nodereal.io",
-      "https://rpc-bsc.bnb48.club"
+      "https://rpc-bsc.bnb48.club",
+      "https://bscapi.terminet.io/rpc"
     ],
     "tokens": {
       "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee": {
@@ -14825,7 +14826,8 @@
       "https://matic-mainnet-archive-rpc.bwarelabs.com",
       "https://poly-rpc.gateway.pokt.network",
       "https://rpc.ankr.com/polygon",
-      "https://polygon-mainnet.public.blastapi.io"
+      "https://polygon-mainnet.public.blastapi.io",
+      "https://polygonapi.terminet.io/rpc"
     ],
     "tokens": {
       "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee": {
@@ -18306,7 +18308,8 @@
     "rpc": [
       "https://api.avax.network/ext/bc/C/rpc",
       "https://rpc.ankr.com/avalanche",
-      "https://ava-mainnet.public.blastapi.io/ext/bc/C/rpc"
+      "https://ava-mainnet.public.blastapi.io/ext/bc/C/rpc",
+      "https://avalancheapi.terminet.io/ext/bc/C/rpc"
     ],
     "tokens": {
       "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee": {
