@@ -16,7 +16,7 @@ export declare type Config = {
 };
 export default class OneInchSpotPrice {
     chainId: number;
-    provider: Provider;
+    provider: Provider | undefined;
     private configURL;
     private config;
     private initializer;

@@ -532,7 +532,6 @@ class OneInchSpotPrice {
   constructor(chainId, provider, axiosConfig, axiosOptions) {
     this.configURL = "https://raw.githubusercontent.com/ayanamitech/1inch-spot-price-sdk/main/data/1inch.json";
     this.chainId = 1;
-    this.provider = new AxiosProvider("");
     this.config = {
       "name": "",
       "coin": "",
@@ -604,6 +603,9 @@ class OneInchSpotPrice {
   }
   async getRate(srcToken, dstToken) {
     await this.initialize();
+    if (typeof this.provider === "undefined") {
+      throw new Error("OneInchSpotPrice: Provider undefined");
+    }
     const config = this.config;
     const [SrcToken, DstToken, SrcTokenDecimals, DstTokenDecimals] = this.getTokens(config.tokens, config.wrappedToken, srcToken, dstToken, this.chainId);
     const OffchainOracle = new ethers.Contract(config.oracle, OffchainABI, this.provider);
@@ -617,6 +619,9 @@ class OneInchSpotPrice {
   }
   async getMultiRates(srcToken, dstToken) {
     await this.initialize();
+    if (typeof this.provider === "undefined") {
+      throw new Error("OneInchSpotPrice: Provider undefined");
+    }
     const config = this.config;
     if (srcToken.length !== dstToken.length) {
       throw new Error("Invalid token length");

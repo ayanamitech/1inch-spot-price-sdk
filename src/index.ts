@@ -32,7 +32,7 @@ export type Config = {
 
 export default class OneInchSpotPrice {
   public chainId: number;
-  public provider: Provider;
+  public provider: Provider | undefined;
   private configURL = 'https://raw.githubusercontent.com/ayanamitech/1inch-spot-price-sdk/main/data/1inch.json';
   private config: Config;
   private initializer: () => void;
@@ -41,7 +41,6 @@ export default class OneInchSpotPrice {
   public constructor(chainId?: number, provider?: Provider, axiosConfig?: fetchConfig, axiosOptions?: extraConfig) {
     // Mock value to address Property has no initializer and is not definitely assigned in the constructor. error
     this.chainId = 1;
-    this.provider = new AxiosProvider('');
     this.config = {
       'name': '',
       'coin': '',
@@ -139,6 +138,9 @@ export default class OneInchSpotPrice {
    */
   public async getRate(srcToken: string, dstToken: string): Promise<string> {
     await this.initialize();
+    if (typeof this.provider === 'undefined') {
+      throw new Error('OneInchSpotPrice: Provider undefined');
+    }
     const config = this.config;
     const [SrcToken, DstToken, SrcTokenDecimals, DstTokenDecimals] = this.getTokens(config.tokens, config.wrappedToken, srcToken, dstToken, this.chainId);
 
@@ -162,6 +164,9 @@ export default class OneInchSpotPrice {
    */
   public async getMultiRates(srcToken: string[], dstToken: string[]): Promise<string[]> {
     await this.initialize();
+    if (typeof this.provider === 'undefined') {
+      throw new Error('OneInchSpotPrice: Provider undefined');
+    }
     const config = this.config;
     if (srcToken.length !== dstToken.length) {
       throw new Error('Invalid token length');
