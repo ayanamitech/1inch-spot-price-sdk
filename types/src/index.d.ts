@@ -1,6 +1,6 @@
 import type { Provider } from '@ethersproject/abstract-provider';
-import type { fetchConfig } from 'axios-auto';
-import type { extraConfig } from 'ethers-axios-provider';
+import type { fetchConfig as axiosConfig } from 'axios-auto';
+import type { extraConfig as providerConfig } from 'ethers-axios-provider';
 export declare type tokens = {
     [key: string]: any;
 };
@@ -21,7 +21,7 @@ export default class OneInchSpotPrice {
     private config;
     private initializer;
     private isInititialized;
-    constructor(chainId?: number, provider?: Provider, axiosConfig?: fetchConfig, axiosOptions?: extraConfig);
+    constructor(chainId?: number, provider?: Provider, providerConfig?: providerConfig, axiosConfig?: axiosConfig, chainConfig?: any);
     private init;
     private getDecimals;
     private getTokenAddress;

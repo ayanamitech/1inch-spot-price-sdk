@@ -529,7 +529,7 @@ BigNumber.config({
   EXPONENTIAL_AT: 1e3
 });
 class OneInchSpotPrice {
-  constructor(chainId, provider, axiosConfig, axiosOptions) {
+  constructor(chainId, provider, providerConfig, axiosConfig, chainConfig) {
     this.configURL = "https://raw.githubusercontent.com/ayanamitech/1inch-spot-price-sdk/main/data/1inch.json";
     this.chainId = 1;
     this.config = {
@@ -543,20 +543,21 @@ class OneInchSpotPrice {
       "tokens": [{ "": {} }]
     };
     this.isInititialized = false;
-    this.initializer = () => this.init(chainId, provider, axiosConfig, axiosOptions).then((init) => {
+    this.initializer = () => this.init(chainId, provider, providerConfig, axiosConfig, chainConfig).then((init) => {
       this.chainId = init[0];
       this.provider = init[1];
       this.config = init[2];
       this.isInititialized = true;
     });
   }
-  async init(chainId, provider, axiosConfig, axiosOptions) {
+  async init(chainId, provider, providerConfig, axiosConfig, chainConfig) {
     const ChainID = chainId ? chainId : provider ? await provider.getNetwork().then((r) => r.chainId) : 1;
-    const getConfig = await get(this.configURL, axiosConfig).then((config) => config.find((cfg) => cfg.chainId === ChainID));
+    const Config = chainConfig || await get(this.configURL, axiosConfig);
+    const getConfig = Config.find((cfg) => cfg.chainId === ChainID);
     if (getConfig === void 0) {
       throw new Error(`ChainID ${ChainID} not supported`);
     }
-    const Provider = provider ? provider : new AxiosProvider(getConfig.rpc.join(", "), axiosOptions);
+    const Provider = provider ? provider : new AxiosProvider(getConfig.rpc.join(", "), providerConfig);
     return [
       ChainID,
       Provider,

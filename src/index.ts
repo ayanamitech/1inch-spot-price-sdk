@@ -6,8 +6,8 @@ import AxiosProvider from 'ethers-axios-provider';
 import { BigNumber } from 'bignumber.js';
 import type { Provider } from '@ethersproject/abstract-provider';
 import type { BigNumberish } from 'ethers';
-import type { fetchConfig } from 'axios-auto';
-import type { extraConfig } from 'ethers-axios-provider';
+import type { fetchConfig as axiosConfig } from 'axios-auto';
+import type { extraConfig as providerConfig } from 'ethers-axios-provider';
 
 BigNumber.config({
   ROUNDING_MODE: BigNumber.ROUND_DOWN,
@@ -38,7 +38,7 @@ export default class OneInchSpotPrice {
   private initializer: () => void;
   private isInititialized: boolean;
 
-  public constructor(chainId?: number, provider?: Provider, axiosConfig?: fetchConfig, axiosOptions?: extraConfig) {
+  public constructor(chainId?: number, provider?: Provider, providerConfig?: providerConfig, axiosConfig?: axiosConfig, chainConfig?: any) {
     // Mock value to address Property has no initializer and is not definitely assigned in the constructor. error
     this.chainId = 1;
     this.config = {
@@ -52,7 +52,7 @@ export default class OneInchSpotPrice {
       'tokens': [{'': {}}]
     };
     this.isInititialized = false;
-    this.initializer = () => this.init(chainId, provider, axiosConfig, axiosOptions)
+    this.initializer = () => this.init(chainId, provider, providerConfig, axiosConfig, chainConfig)
       .then(init => {
         this.chainId = init[0];
         this.provider = init[1];
@@ -61,14 +61,15 @@ export default class OneInchSpotPrice {
       });
   }
 
-  private async init(chainId?: number, provider?: Provider, axiosConfig?: fetchConfig, axiosOptions?: extraConfig): Promise<[number, Provider, Config]> {
+  private async init(chainId?: number, provider?: Provider, providerConfig?: providerConfig, axiosConfig?: axiosConfig, chainConfig?: any): Promise<[number, Provider, Config]> {
     const ChainID = chainId ? chainId : provider ? await provider.getNetwork().then((r) => r.chainId) : 1;
-    const getConfig: Config | undefined = await get(this.configURL, axiosConfig).then(config => config.find((cfg: Config) => cfg.chainId === ChainID));
+    const Config = chainConfig || await get(this.configURL, axiosConfig);
+    const getConfig: Config | undefined = Config.find((cfg: Config) => cfg.chainId === ChainID);
     if (getConfig === undefined) {
       throw new Error(`ChainID ${ChainID} not supported`);
     }
 
-    const Provider: Provider = provider ? provider : new AxiosProvider(getConfig.rpc.join(', '), axiosOptions);
+    const Provider: Provider = provider ? provider : new AxiosProvider(getConfig.rpc.join(', '), providerConfig);
 
     return [
       ChainID,

@@ -64,6 +64,15 @@ const multiFetchRates = async (multiFetch: [string, string, string][]): Promise<
 };
 
 describe('1inch-spot-price', () => {
+  it('getConfig', async () => {
+    const ConfigURL = 'https://raw.githubusercontent.com/ayanamitech/1inch-spot-price-sdk/main/data/1inch.json';
+    const config = await axios.get(ConfigURL);
+
+    const spotPrice = new OneInchSpotPrice(undefined, undefined, undefined, undefined, config);
+    const rate = await spotPrice.getRate('ETH', 'USDT').then(r => new BigNumber(r));
+    console.log(`OneInch ETH price: ${rate.toString()}`);
+  });
+  
   it('getRate', async () => {
     const rates = await Promise.all(toFetch.map(f => fetchRates(...f)));
     for (const rate of rates) {
