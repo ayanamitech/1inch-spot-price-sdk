@@ -3991,10 +3991,10 @@
     "name": "Bitgert Mainnet",
     "chain": "Brise",
     "rpc": [
+      "https://rpc.icecreamswap.com",
       "https://mainnet-rpc.brisescan.com",
       "https://chainrpc.com",
-      "https://serverrpc.com",
-      "https://rpc.icecreamswap.com"
+      "https://serverrpc.com"
     ],
     "faucets": [],
     "nativeCurrency": {
