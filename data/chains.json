@@ -232,7 +232,7 @@
       {
         "name": "etherscan",
         "url": "https://optimistic.etherscan.io",
-        "standard": "none"
+        "standard": "EIP3091"
       }
     ]
   },
