@@ -6378,16 +6378,6 @@
           "tokens"
         ]
       },
-      "0xee06a81a695750e71a662b51066f2c74cf4478a0": {
-        "symbol": "$DG",
-        "name": "decentral.games",
-        "decimals": 18,
-        "address": "0xee06a81a695750e71a662b51066f2c74cf4478a0",
-        "logoURI": "https://tokens.1inch.io/0xee06a81a695750e71a662b51066f2c74cf4478a0.png",
-        "tags": [
-          "tokens"
-        ]
-      },
       "0x0dde6f6e345bfd23f3f419f0dfe04e93143b44fb": {
         "symbol": "SOTA",
         "name": "SOTA",
@@ -10216,6 +10206,37 @@
         "address": "0x1abaea1f7c830bd89acc67ec4af516284b1bc33c",
         "logoURI": "https://tokens.1inch.io/0x1abaea1f7c830bd89acc67ec4af516284b1bc33c.png",
         "eip2612": true,
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x4b520c812e8430659fc9f12f6d0c39026c83588d": {
+        "symbol": "DG",
+        "name": "Decentral Games",
+        "decimals": 18,
+        "address": "0x4b520c812e8430659fc9f12f6d0c39026c83588d",
+        "logoURI": "https://tokens.1inch.io/0x4b520c812e8430659fc9f12f6d0c39026c83588d.png",
+        "eip2612": true,
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0xcfcecfe2bd2fed07a9145222e8a7ad9cf1ccd22a": {
+        "symbol": "ADS",
+        "name": "Adshares",
+        "decimals": 11,
+        "address": "0xcfcecfe2bd2fed07a9145222e8a7ad9cf1ccd22a",
+        "logoURI": "https://tokens.1inch.io/0xcfcecfe2bd2fed07a9145222e8a7ad9cf1ccd22a.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x6fb3e0a217407efff7ca062d46c26e5d60a14d69": {
+        "symbol": "IOTX",
+        "name": "IoTeX Network",
+        "decimals": 18,
+        "address": "0x6fb3e0a217407efff7ca062d46c26e5d60a14d69",
+        "logoURI": "https://tokens.1inch.io/0x6fb3e0a217407efff7ca062d46c26e5d60a14d69.png",
         "tags": [
           "tokens"
         ]
@@ -14457,6 +14478,26 @@
         "tags": [
           "tokens"
         ]
+      },
+      "0x715d400f88c167884bbcc41c5fea407ed4d2f8a0": {
+        "symbol": "AXS",
+        "name": "Axie Infinity Shard",
+        "decimals": 18,
+        "address": "0x715d400f88c167884bbcc41c5fea407ed4d2f8a0",
+        "logoURI": "https://tokens.1inch.io/0x715d400f88c167884bbcc41c5fea407ed4d2f8a0.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0xcfcecfe2bd2fed07a9145222e8a7ad9cf1ccd22a": {
+        "symbol": "ADS",
+        "name": "Adshares",
+        "decimals": 11,
+        "address": "0xcfcecfe2bd2fed07a9145222e8a7ad9cf1ccd22a",
+        "logoURI": "https://tokens.1inch.io/0xcfcecfe2bd2fed07a9145222e8a7ad9cf1ccd22a.png",
+        "tags": [
+          "tokens"
+        ]
       }
     }
   },
@@ -17019,6 +17060,56 @@
         "address": "0x3a9a81d576d83ff21f26f325066054540720fc34",
         "logoURI": "https://tokens.1inch.io/0x3a9a81d576d83ff21f26f325066054540720fc34.png",
         "eip2612": true,
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x2934b36ca9a4b31e633c5be670c8c8b28b6aa015": {
+        "symbol": "THX",
+        "name": "THX Network (PoS)",
+        "decimals": 18,
+        "address": "0x2934b36ca9a4b31e633c5be670c8c8b28b6aa015",
+        "logoURI": "https://tokens.1inch.io/0x2934b36ca9a4b31e633c5be670c8c8b28b6aa015.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0xee9a352f6aac4af1a5b9f467f6a93e0ffbe9dd35": {
+        "symbol": "MASQ",
+        "name": "MASQ (PoS)",
+        "decimals": 18,
+        "address": "0xee9a352f6aac4af1a5b9f467f6a93e0ffbe9dd35",
+        "logoURI": "https://tokens.1inch.io/0xee9a352f6aac4af1a5b9f467f6a93e0ffbe9dd35.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x44d09156c7b4acf0c64459fbcced7613f5519918": {
+        "symbol": "$KMC",
+        "name": "$KMC",
+        "decimals": 18,
+        "address": "0x44d09156c7b4acf0c64459fbcced7613f5519918",
+        "logoURI": "https://tokens.1inch.io/0x44d09156c7b4acf0c64459fbcced7613f5519918.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x598e49f01befeb1753737934a5b11fea9119c796": {
+        "symbol": "ADS",
+        "name": "Adshares (PoS)",
+        "decimals": 11,
+        "address": "0x598e49f01befeb1753737934a5b11fea9119c796",
+        "logoURI": "https://tokens.1inch.io/0x598e49f01befeb1753737934a5b11fea9119c796.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x300211def2a644b036a9bdd3e58159bb2074d388": {
+        "symbol": "CIOTX",
+        "name": "Crosschain IOTX",
+        "decimals": 18,
+        "address": "0x300211def2a644b036a9bdd3e58159bb2074d388",
+        "logoURI": "https://tokens.1inch.io/0x300211def2a644b036a9bdd3e58159bb2074d388.png",
         "tags": [
           "tokens"
         ]
