@@ -1065,6 +1065,7 @@
         "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
         "decimals": 6,
         "logoURI": "https://tokens.1inch.io/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png",
+        "domainVersion": "2",
         "tags": [
           "tokens"
         ]
@@ -16279,16 +16280,6 @@
         "decimals": 18,
         "address": "0x235737dbb56e8517391473f7c964db31fa6ef280",
         "logoURI": "https://tokens.1inch.io/0x235737dbb56e8517391473f7c964db31fa6ef280.png",
-        "tags": [
-          "tokens"
-        ]
-      },
-      "0x6ae7dfc73e0dde2aa99ac063dcf7e8a63265108c": {
-        "symbol": "JPYC",
-        "name": "JPY Coin (PoS)",
-        "decimals": 18,
-        "address": "0x6ae7dfc73e0dde2aa99ac063dcf7e8a63265108c",
-        "logoURI": "https://tokens.1inch.io/0x6ae7dfc73e0dde2aa99ac063dcf7e8a63265108c.png",
         "tags": [
           "tokens"
         ]
