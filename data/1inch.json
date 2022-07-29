@@ -890,16 +890,6 @@
           "tokens"
         ]
       },
-      "0x8762db106b2c2a0bccb3a80d1ed41273552616e8": {
-        "symbol": "RSR",
-        "name": "Reserve Rights",
-        "address": "0x8762db106b2c2a0bccb3a80d1ed41273552616e8",
-        "decimals": 18,
-        "logoURI": "https://tokens.1inch.io/0x8762db106b2c2a0bccb3a80d1ed41273552616e8.png",
-        "tags": [
-          "tokens"
-        ]
-      },
       "0x89ab32156e46f46d02ade3fecbe5fc4243b9aaed": {
         "symbol": "PNT",
         "name": "pNetwork Token",
@@ -1066,6 +1056,7 @@
         "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
         "decimals": 6,
         "logoURI": "https://tokens.1inch.io/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png",
+        "eip2612": true,
         "domainVersion": "2",
         "tags": [
           "tokens"
@@ -7906,7 +7897,7 @@
         ]
       },
       "0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198": {
-        "symbol": "BANK_BANKLESS",
+        "symbol": "BANK",
         "name": "Bankless Token",
         "decimals": 18,
         "address": "0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198",
@@ -8137,17 +8128,6 @@
         "decimals": 18,
         "address": "0x0abdace70d3790235af448c88547603b945604ea",
         "logoURI": "https://tokens.1inch.io/0x0abdace70d3790235af448c88547603b945604ea.png",
-        "tags": [
-          "tokens"
-        ]
-      },
-      "0xdef1fac7bf08f173d286bbbdcbeeade695129840": {
-        "symbol": "DEFT",
-        "name": "Defi Factory Token",
-        "decimals": 18,
-        "address": "0xdef1fac7bf08f173d286bbbdcbeeade695129840",
-        "logoURI": "https://tokens.1inch.io/0xdef1fac7bf08f173d286bbbdcbeeade695129840.png",
-        "eip2612": true,
         "tags": [
           "tokens"
         ]
@@ -9661,17 +9641,6 @@
           "tokens"
         ]
       },
-      "0x8b3192f5eebd8579568a2ed41e6feb402f93f73f": {
-        "symbol": "SAITAMA",
-        "name": "Saitama Inu",
-        "decimals": 9,
-        "address": "0x8b3192f5eebd8579568a2ed41e6feb402f93f73f",
-        "logoURI": "https://tokens.1inch.io/0x8b3192f5eebd8579568a2ed41e6feb402f93f73f.png",
-        "isFoT": true,
-        "tags": [
-          "tokens"
-        ]
-      },
       "0xaf5191b0de278c7286d6c7cc6ab6bb8a73ba2cd6": {
         "symbol": "STG",
         "name": "StargateToken",
@@ -10269,6 +10238,16 @@
         "decimals": 18,
         "address": "0x33d63ba1e57e54779f7ddaeaa7109349344cf5f1",
         "logoURI": "https://tokens.1inch.io/0x33d63ba1e57e54779f7ddaeaa7109349344cf5f1.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0xf063fe1ab7a291c5d06a86e14730b00bf24cb589": {
+        "symbol": "SALE",
+        "name": "DxSale.Network",
+        "decimals": 18,
+        "address": "0xf063fe1ab7a291c5d06a86e14730b00bf24cb589",
+        "logoURI": "https://tokens.1inch.io/0xf063fe1ab7a291c5d06a86e14730b00bf24cb589.png",
         "tags": [
           "tokens"
         ]
@@ -14530,6 +14509,16 @@
         "tags": [
           "tokens"
         ]
+      },
+      "0x04f73a09e2eb410205be256054794fb452f0d245": {
+        "symbol": "SALE",
+        "name": "DxSale.Network",
+        "decimals": 18,
+        "address": "0x04f73a09e2eb410205be256054794fb452f0d245",
+        "logoURI": "https://tokens.1inch.io/0x04f73a09e2eb410205be256054794fb452f0d245.png",
+        "tags": [
+          "tokens"
+        ]
       }
     }
   },
@@ -17234,6 +17223,37 @@
         "decimals": 18,
         "address": "0xbd1463f02f61676d53fd183c2b19282bff93d099",
         "logoURI": "https://tokens.1inch.io/0xbd1463f02f61676d53fd183c2b19282bff93d099.png",
+        "eip2612": true,
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x8f6196901a4a153d8ee8f3fa779a042f6092d908": {
+        "symbol": "SALE",
+        "name": "DxSale.Network (PoS)",
+        "decimals": 18,
+        "address": "0x8f6196901a4a153d8ee8f3fa779a042f6092d908",
+        "logoURI": "https://tokens.1inch.io/0x8f6196901a4a153d8ee8f3fa779a042f6092d908.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x89ef0900b0a6b5548ab2ff58ef588f9433b5fcf5": {
+        "symbol": "CRBN",
+        "name": "Carbon (PoS)",
+        "decimals": 18,
+        "address": "0x89ef0900b0a6b5548ab2ff58ef588f9433b5fcf5",
+        "logoURI": "https://tokens.1inch.io/0x89ef0900b0a6b5548ab2ff58ef588f9433b5fcf5.png",
+        "tags": [
+          "tokens"
+        ]
+      },
+      "0x431d5dff03120afa4bdf332c61a6e1766ef37bdb": {
+        "symbol": "JPYC",
+        "name": "JPY Coin",
+        "decimals": 18,
+        "address": "0x431d5dff03120afa4bdf332c61a6e1766ef37bdb",
+        "logoURI": "https://tokens.1inch.io/0x431d5dff03120afa4bdf332c61a6e1766ef37bdb.png",
         "eip2612": true,
         "tags": [
           "tokens"
@@ -19974,7 +19994,6 @@
         "decimals": 18,
         "address": "0xdcd6d4e2b3e1d1e1e6fa8c21c8a323dcbecff970",
         "logoURI": "https://tokens.1inch.io/0xdcd6d4e2b3e1d1e1e6fa8c21c8a323dcbecff970.png",
-        "eip2612": true,
         "tags": [
           "tokens"
         ]
@@ -20026,7 +20045,6 @@
         "decimals": 18,
         "address": "0x7faa64faf54750a2e3ee621166635feaf406ab22",
         "logoURI": "https://tokens.1inch.io/0x7faa64faf54750a2e3ee621166635feaf406ab22.png",
-        "eip2612": true,
         "tags": [
           "tokens"
         ]
